@@ -11,9 +11,9 @@ target_newyork_cons = st.sidebar.number_input('New York Consulting: Target', val
 target_sf_cons = st.sidebar.number_input('San Francisco Consulting: Target', value = 20000)
 target_santiago_cons = st.sidebar.number_input('Santiago Consulting: Target', value = 20000)
 target_seoul_cons = st.sidebar.number_input('Seoul Consulting: Target', value = 20000)
-target_shanghai_cons = st.sidebar.number_input('Shanghai Consulting: Target', value = 20000)
-target_tokyo_cons = st.sidebar.number_input('Tokyo Consulting: Target', value = 20000)
-target_lahore_cons = st.sidebar.number_input('Lahore Consulting: Target', value = 20000)
+target_shanghai_cons = st.sidebar.number_input('Shanghai Consulting: Target', value = 18000)
+target_tokyo_cons = st.sidebar.number_input('Tokyo Consulting: Target', value = 18000)
+target_lahore_cons = st.sidebar.number_input('Lahore Consulting: Target', value = 13000)
 
 target_berlin_ls = st.sidebar.number_input('Berlin LS: Target', value = 28000)
 target_london_ls = st.sidebar.number_input('London LS: Target', value = 28000)
@@ -24,90 +24,256 @@ target_shanghai_ls = st.sidebar.number_input('Shanghai LS: Target', value = 1600
 target_tokyo_ls = st.sidebar.number_input('Tokyo LS: Target', value = 14500)
 target_santiago_ls = st.sidebar.number_input('Santiago LS: Target', value = 28000)
 
+#### Consulting
+
+berlin_cons_70 = st.sidebar.number_input('Berlin Bonus %: Consulting 70-80 %', value = 1.0)
+berlin_cons_80 = st.sidebar.number_input('Berlin Bonus %: Consulting 80-90 %', value = 4.0)
+berlin_cons_90 = st.sidebar.number_input('Berlin Bonus %: Consulting 90-100 %', value = 6.0)
+berlin_cons_100 = st.sidebar.number_input('Berlin Bonus %: Consulting 100-110 %', value = 8.0)
+berlin_cons_110 = st.sidebar.number_input('Berlin Bonus %: Consulting 110-120 %', value = 8.3)
+berlin_cons_120 = st.sidebar.number_input('Berlin Bonus %: Consulting 120-140 %', value = 8.7)
+berlin_cons_140 = st.sidebar.number_input('Berlin Bonus %: Consulting > 140 %', value = 9.0)
+
+london_cons_70 = st.sidebar.number_input('London Bonus %: Consulting 70-80 %', value = 1.0)
+london_cons_80 = st.sidebar.number_input('London Bonus %: Consulting 80-90 %', value = 4.0)
+london_cons_90 = st.sidebar.number_input('London Bonus %: Consulting 90-100 %', value = 6.0)
+london_cons_100 = st.sidebar.number_input('London Bonus %: Consulting 100-110 %', value = 8.0)
+london_cons_110 = st.sidebar.number_input('London Bonus %: Consulting 110-120 %', value = 8.3)
+london_cons_120 = st.sidebar.number_input('London Bonus %: Consulting 120-140 %', value = 8.7)
+london_cons_140 = st.sidebar.number_input('London Bonus %: Consulting > 140 %', value = 9.0)
+
+munich_cons_70 = st.sidebar.number_input('Munich Bonus %: Consulting 70-80 %', value = 1.0)
+munich_cons_80 = st.sidebar.number_input('Munich Bonus %: Consulting 80-90 %', value = 4.0)
+munich_cons_90 = st.sidebar.number_input('Munich Bonus %: Consulting 90-100 %', value = 6.0)
+munich_cons_100 = st.sidebar.number_input('Munich Bonus %: Consulting 100-110 %', value = 8.0)
+munich_cons_110 = st.sidebar.number_input('Munich Bonus %: Consulting 110-120 %', value = 8.3)
+munich_cons_120 = st.sidebar.number_input('Munich Bonus %: Consulting 120-140 %', value = 8.7)
+munich_cons_140 = st.sidebar.number_input('Munich Bonus %: Consulting > 140 %', value = 9.0)
+
+newyork_cons_70 = st.sidebar.number_input('New York Bonus %: Consulting 70-80 %', value = 1.0)
+newyork_cons_80 = st.sidebar.number_input('New York Bonus %: Consulting 80-90 %', value = 4.0)
+newyork_cons_90 = st.sidebar.number_input('New York Bonus %: Consulting 90-100 %', value = 6.0)
+newyork_cons_100 = st.sidebar.number_input('New York Bonus %: Consulting 100-110 %', value = 8.0)
+newyork_cons_110 = st.sidebar.number_input('New York Bonus %: Consulting 110-120 %', value = 8.3)
+newyork_cons_120 = st.sidebar.number_input('New York Bonus %: Consulting 120-140 %', value = 8.7)
+newyork_cons_140 = st.sidebar.number_input('New York Bonus %: Consulting > 140 %', value = 9.0)
+
+sf_cons_70 = st.sidebar.number_input('San Francisco Bonus %: Consulting 70-80 %', value = 1.0)
+sf_cons_80 = st.sidebar.number_input('San Francisco Bonus %: Consulting 80-90 %', value = 4.0)
+sf_cons_90 = st.sidebar.number_input('San Francisco Bonus %: Consulting 90-100 %', value = 6.0)
+sf_cons_100 = st.sidebar.number_input('San Francisco Bonus %: Consulting 100-110 %', value = 8.0)
+sf_cons_110 = st.sidebar.number_input('San Francisco Bonus %: Consulting 110-120 %', value = 8.3)
+sf_cons_120 = st.sidebar.number_input('San Francisco Bonus %: Consulting 120-140 %', value = 8.7)
+sf_cons_140 = st.sidebar.number_input('San Francisco Bonus %: Consulting > 140 %', value = 9.0)
+
+santiago_cons_70 = st.sidebar.number_input('Santiago Bonus %: Consulting 70-80 %', value = 1.0)
+santiago_cons_80 = st.sidebar.number_input('Santiago Bonus %: Consulting 80-90 %', value = 4.0)
+santiago_cons_90 = st.sidebar.number_input('Santiago Bonus %: Consulting 90-100 %', value = 6.0)
+santiago_cons_100 = st.sidebar.number_input('Santiago Bonus %: Consulting 100-110 %', value = 8.0)
+santiago_cons_110 = st.sidebar.number_input('Santiago Bonus %: Consulting 110-120 %', value = 8.3)
+santiago_cons_120 = st.sidebar.number_input('Santiago Bonus %: Consulting 120-140 %', value = 8.7)
+santiago_cons_140 = st.sidebar.number_input('Santiago Bonus %: Consulting > 140 %', value = 9.0)
+
+seoul_cons_70 = st.sidebar.number_input('Seoul Bonus %: Consulting 70-80 %', value = 1.0)
+seoul_cons_80 = st.sidebar.number_input('Seoul Bonus %: Consulting 80-90 %', value = 4.0)
+seoul_cons_90 = st.sidebar.number_input('Seoul Bonus %: Consulting 90-100 %', value = 6.0)
+seoul_cons_100 = st.sidebar.number_input('Seoul Bonus %: Consulting 100-110 %', value = 8.0)
+seoul_cons_110 = st.sidebar.number_input('Seoul Bonus %: Consulting 110-120 %', value = 8.3)
+seoul_cons_120 = st.sidebar.number_input('Seoul Bonus %: Consulting 120-140 %', value = 8.7)
+seoul_cons_140 = st.sidebar.number_input('Seoul Bonus %: Consulting > 140 %', value = 9.0)
+
+shanghai_cons_70 = st.sidebar.number_input('Shanghai Bonus %: Consulting 70-80 %', value = 1.0)
+shanghai_cons_80 = st.sidebar.number_input('Shanghai Bonus %: Consulting 80-90 %', value = 4.0)
+shanghai_cons_90 = st.sidebar.number_input('Shanghai Bonus %: Consulting 90-100 %', value = 6.0)
+shanghai_cons_100 = st.sidebar.number_input('Shanghai Bonus %: Consulting 100-110 %', value = 8.0)
+shanghai_cons_110 = st.sidebar.number_input('Shanghai Bonus %: Consulting 110-120 %', value = 8.3)
+shanghai_cons_120 = st.sidebar.number_input('Shangai Bonus %: Consulting 120-140 %', value = 8.7)
+shanghai_cons_140 = st.sidebar.number_input('Shanghai Bonus %: Consulting > 140 %', value = 9.0)
+
+tokyo_cons_70 = st.sidebar.number_input('Tokyo Bonus %: Consulting 70-80 %', value = 1.0)
+tokyo_cons_80 = st.sidebar.number_input('Tokyo Bonus %: Consulting 80-90 %', value = 4.0)
+tokyo_cons_90 = st.sidebar.number_input('Tokyo Bonus %: Consulting 90-100 %', value = 6.0)
+tokyo_cons_100 = st.sidebar.number_input('Tokyo Bonus %: Consulting 100-110 %', value = 8.0)
+tokyo_cons_110 = st.sidebar.number_input('Tokyo Bonus %: Consulting 110-120 %', value = 8.3)
+tokyo_cons_120 = st.sidebar.number_input('Tokyo Bonus %: Consulting 120-140 %', value = 8.7)
+tokyo_cons_140 = st.sidebar.number_input('Tokyo Bonus %: Consulting > 140 %', value = 9.0)
+
+lahore_cons_70 = st.sidebar.number_input('Lahore Bonus %: Consulting 70-80 %', value = 1.0)
+lahore_cons_80 = st.sidebar.number_input('Tokyo Bonus %: Consulting 80-90 %', value = 1.5)
+lahore_cons_90 = st.sidebar.number_input('Tokyo Bonus %: Consulting 90-100 %', value = 2.0)
+lahore_cons_100 = st.sidebar.number_input('Tokyo Bonus %: Consulting 100-110 %', value = 2.3)
+lahore_cons_110 = st.sidebar.number_input('Tokyo Bonus %: Consulting 110-120 %', value = 2.5)
+lahore_cons_120 = st.sidebar.number_input('Tokyo Bonus %: Consulting 120-140 %', value = 2.7)
+lahore_cons_140 = st.sidebar.number_input('Tokyo Bonus %: Consulting > 140 %', value = 3.0)
+
+##### Life Sciences
+berlin_ls_70 = st.sidebar.number_input('Berlin Bonus %: LS 70-80 %', value = 1.0)
+berlin_ls_80 = st.sidebar.number_input('Berlin Bonus %: LS 80-90 %', value = 3.0)
+berlin_ls_90 = st.sidebar.number_input('Berlin Bonus %: LS 90-100 %', value = 5.0)
+berlin_ls_100 = st.sidebar.number_input('Berlin Bonus %: LS 100-110 %', value = 7.0)
+berlin_ls_110 = st.sidebar.number_input('Berlin Bonus %: LS 110-120 %', value = 7.3)
+berlin_ls_120 = st.sidebar.number_input('Berlin Bonus %: LS 120-140 %', value = 7.7)
+berlin_ls_140 = st.sidebar.number_input('Berlin Bonus %: LS > 140 %', value = 8.0)
+
+london_ls_70 = st.sidebar.number_input('London Bonus %: LS 70-80 %', value = 1.0)
+london_ls_80 = st.sidebar.number_input('London Bonus %: LS 80-90 %', value = 3.0)
+london_ls_90 = st.sidebar.number_input('London Bonus %: LS 90-100 %', value = 5.0)
+london_ls_100 = st.sidebar.number_input('London Bonus %: LS 100-110 %', value = 7.0)
+london_ls_110 = st.sidebar.number_input('London Bonus %: LS 110-120 %', value = 7.3)
+london_ls_120 = st.sidebar.number_input('London Bonus %: LS 120-140 %', value = 7.7)
+london_ls_140 = st.sidebar.number_input('London Bonus %: LS > 140 %', value = 8.0)
+
+munich_ls_70 = st.sidebar.number_input('Munich Bonus %: LS 70-80 %', value = 1.0)
+munich_ls_80 = st.sidebar.number_input('Munich Bonus %: LS 80-90 %', value = 3.0)
+munich_ls_90 = st.sidebar.number_input('Munich Bonus %: LS 90-100 %', value = 5.0)
+munich_ls_100 = st.sidebar.number_input('Munich Bonus %: LS 100-110 %', value = 7.0)
+munich_ls_110 = st.sidebar.number_input('Munich Bonus %: LS 110-120 %', value = 7.3)
+munich_ls_120 = st.sidebar.number_input('Munich Bonus %: LS 120-140 %', value = 7.7)
+munich_ls_140 = st.sidebar.number_input('Munich Bonus %: LS > 140 %', value = 8.0)
+
+newyork_ls_70 = st.sidebar.number_input('New York Bonus %: LS 70-80 %', value = 1.0)
+newyork_ls_80 = st.sidebar.number_input('New York Bonus %: LS 80-90 %', value = 3.0)
+newyork_ls_90 = st.sidebar.number_input('New York Bonus %: LS 90-100 %', value = 5.0)
+newyork_ls_100 = st.sidebar.number_input('New York Bonus %: LS 100-110 %', value = 7.0)
+newyork_ls_110 = st.sidebar.number_input('New York Bonus %: LS 110-120 %', value = 7.3)
+newyork_ls_120 = st.sidebar.number_input('New York Bonus %: LS 120-140 %', value = 7.7)
+newyork_ls_140 = st.sidebar.number_input('New York Bonus %: LS > 140 %', value = 8.0)
+
+sf_ls_70 = st.sidebar.number_input('San Francisco Bonus %: LS 70-80 %', value = 1.0)
+sf_ls_80 = st.sidebar.number_input('San Francisco Bonus %: LS 80-90 %', value = 3.0)
+sf_ls_90 = st.sidebar.number_input('San Francisco Bonus %: LS 90-100 %', value = 5.0)
+sf_ls_100 = st.sidebar.number_input('San Francisco Bonus %: LS 100-110 %', value = 7.0)
+sf_ls_110 = st.sidebar.number_input('San Francisco Bonus %: LS 110-120 %', value = 7.3)
+sf_ls_120 = st.sidebar.number_input('San Francisco Bonus %: LS 120-140 %', value = 7.7)
+sf_ls_140 = st.sidebar.number_input('San Francisco Bonus %: LS > 140 %', value = 8.0)
+
+santiago_ls_70 = st.sidebar.number_input('Santiago Bonus %: LS 70-80 %', value = 1.0)
+santiago_ls_80 = st.sidebar.number_input('Santiago Bonus %: LS 80-90 %', value = 3.0)
+santiago_ls_90 = st.sidebar.number_input('Santiago Bonus %: LS 90-100 %', value = 5.0)
+santiago_ls_100 = st.sidebar.number_input('Santiago Bonus %: LS 100-110 %', value = 7.0)
+santiago_ls_110 = st.sidebar.number_input('Santiago Bonus %: LS 110-120 %', value = 7.3)
+santiago_ls_120 = st.sidebar.number_input('Santiago Bonus %: LS 120-140 %', value = 7.7)
+santiago_ls_140 = st.sidebar.number_input('Santiago Bonus %: LS > 140 %', value = 8.0)
+
+seoul_ls_70 = st.sidebar.number_input('Seoul Bonus %: LS 70-80 %', value = 1.5)
+seoul_ls_80 = st.sidebar.number_input('Seoul Bonus %: LS 80-90 %', value = 3.0)
+seoul_ls_90 = st.sidebar.number_input('Seoul Bonus %: LS 90-100 %', value = 5.0)
+seoul_ls_100 = st.sidebar.number_input('Seoul Bonus %: LS 100-110 %', value = 7.0)
+seoul_ls_110 = st.sidebar.number_input('Seoul Bonus %: LS 110-120 %', value = 7.3)
+seoul_ls_120 = st.sidebar.number_input('Seoul Bonus %: LS 120-140 %', value = 7.7)
+seoul_ls_140 = st.sidebar.number_input('Seoul Bonus %: LS > 140 %', value = 8.0)
+
+shanghai_ls_70 = st.sidebar.number_input('Shanghai Bonus %: LS 70-80 %', value = 1.5)
+shanghai_ls_80 = st.sidebar.number_input('Shanghai Bonus %: LS 80-90 %', value = 3.0)
+shanghai_ls_90 = st.sidebar.number_input('Shanghai Bonus %: LS 90-100 %', value = 5.0)
+shanghai_ls_100 = st.sidebar.number_input('Shanghai Bonus %: LS 100-110 %', value = 7.0)
+shanghai_ls_110 = st.sidebar.number_input('Shanghai Bonus %: LS 110-120 %', value = 7.3)
+shanghai_ls_120 = st.sidebar.number_input('Shangai Bonus %: LS 120-140 %', value = 7.7)
+shanghai_ls_140 = st.sidebar.number_input('Shanghai Bonus %: LS > 140 %', value = 8.0)
+
+tokyo_ls_70 = st.sidebar.number_input('Tokyo Bonus %: LS 70-80 %', value = 1.5)
+tokyo_ls_80 = st.sidebar.number_input('Tokyo Bonus %: LS 80-90 %', value = 3.0)
+tokyo_ls_90 = st.sidebar.number_input('Tokyo Bonus %: LS 90-100 %', value = 5.0)
+tokyo_ls_100 = st.sidebar.number_input('Tokyo Bonus %: LS 100-110 %', value = 7.0)
+tokyo_ls_110 = st.sidebar.number_input('Tokyo Bonus %: LS 110-120 %', value = 7.3)
+tokyo_ls_120 = st.sidebar.number_input('Tokyo Bonus %: LS 120-140 %', value = 7.7)
+tokyo_ls_140 = st.sidebar.number_input('Tokyo Bonus %: LS > 140 %', value = 8.0)
+
+lahore_ls_70 = st.sidebar.number_input('Lahore Bonus %: LS 70-80 %', value = 1.0)
+lahore_ls_80 = st.sidebar.number_input('Lahore Bonus %: LS 80-90 %', value = 1.5)
+lahore_ls_90 = st.sidebar.number_input('Lahore Bonus %: LS 90-100 %', value = 2.0)
+lahore_ls_100 = st.sidebar.number_input('Lahore Bonus %: LS 100-110 %', value = 2.3)
+lahore_ls_110 = st.sidebar.number_input('Lahore Bonus %: LS 110-120 %', value = 2.5)
+lahore_ls_120 = st.sidebar.number_input('Lahore Bonus %: LS 120-140 %', value = 2.7)
+lahore_ls_140 = st.sidebar.number_input('Lahore Bonus %: LS > 140 %', value = 3.0)
+
+
+
+
 
 bonus_rates_2023 = {'verticals': {
                             'Consulting': { 'costs': {
-                                           70: {'Berlin': 1.0,
-                                               'London': 1.0,
-                                               'Munich': 1.0,
-                                               'New York': 1.0,
-                                               'San Francisco': 1.0,
-                                               'Santiago': 1.0,
-                                               'Seoul': 1.0,
-                                               'Shanghai': 1.0,
-                                               'Tokyo': 1.0,
-                                               'Lahore': 1.0},
+                                           70: {'Berlin': berlin_cons_70,
+                                               'London': london_cons_70,
+                                               'Munich': munich_cons_70,
+                                               'New York': newyork_cons_70,
+                                               'San Francisco': sf_cons_70,
+                                               'Santiago': santiago_cons_70,
+                                               'Seoul': seoul_cons_70,
+                                               'Shanghai': shanghai_cons_70,
+                                               'Tokyo': tokyo_cons_70,
+                                               'Lahore': lahore_cons_70},
                                            80: {
-                                                'Berlin' : 4.0,
-                                                'London': 4.0,
-                                                'Munich': 4.0,
-                                                'New York': 4.0,
-                                                'San Francisco': 4.0,
-                                                'Santiago': 4.0,
-                                                'Seoul': 4.0,
-                                                'Shanghai': 4.0,
-                                                'Tokyo': 4.0,
-                                                'Lahore': 1.5
+                                                'Berlin' : berlin_cons_80,
+                                                'London': london_cons_80,
+                                                'Munich': munich_cons_80,
+                                                'New York': newyork_cons_80,
+                                                'San Francisco': sf_cons_80,
+                                                'Santiago': santiago_cons_80,
+                                                'Seoul': seoul_cons_80,
+                                                'Shanghai': shanghai_cons_80,
+                                                'Tokyo': tokyo_cons_80,
+                                                'Lahore': lahore_cons_80
                                                },
                                            90: {
-                                                'Berlin': 6.0,
-                                                'London': 6.0,
-                                                'Munich': 6.0,
-                                                'New York': 6.0,
-                                                'San Francisco': 6.0,
-                                                'Santiago': 6.0,
-                                                'Seoul': 6.0,
-                                                'Shanghai': 6.0,
-                                                'Tokyo': 6.0,
-                                                'Lahore': 2.0
+                                                'Berlin': berlin_cons_90,
+                                                'London': london_cons_90,
+                                                'Munich': munich_cons_90,
+                                                'New York': newyork_cons_90,
+                                                'San Francisco': sf_cons_90,
+                                                'Santiago': santiago_cons_90,
+                                                'Seoul': seoul_cons_90,
+                                                'Shanghai': shanghai_cons_90,
+                                                'Tokyo': tokyo_cons_90,
+                                                'Lahore': lahore_cons_90
                                                 },
                                            100: {
-                                                'Berlin': 8.0,
-                                                'London': 8.0,
-                                                'Munich': 8.0,
-                                                'New York': 8.0,
-                                                'San Francisco': 8.0,
-                                                'Santiago': 8.0,
-                                                'Seoul': 8.0,
-                                                'Shanghai': 8.0,
-                                                'Tokyo': 8.0,
-                                                'Lahore': 2.3 
+                                                'Berlin': berlin_cons_100,
+                                                'London': london_cons_100,
+                                                'Munich': munich_cons_100,
+                                                'New York': newyork_cons_100,
+                                                'San Francisco': sf_cons_100,
+                                                'Santiago': santiago_cons_100,
+                                                'Seoul': seoul_cons_100,
+                                                'Shanghai': shanghai_cons_100,
+                                                'Tokyo': tokyo_cons_100,
+                                                'Lahore': lahore_cons_100 
                                            },
                                            110: {
-                                                'Berlin': 8.3,
-                                                'London': 8.3,
-                                                'Munich': 8.3,
-                                                'New York': 8.3,
-                                                'San Francisco': 8.3,
-                                                'Santiago': 8.3,
-                                                'Seoul': 8.3,
-                                                'Shanghai': 8.3,
-                                                'Tokyo': 8.3,
-                                                'Lahore': 2.5 
+                                                'Berlin': berlin_cons_110,
+                                                'London': london_cons_110,
+                                                'Munich': munich_cons_110,
+                                                'New York': newyork_cons_110,
+                                                'San Francisco': sf_cons_110,
+                                                'Santiago': santiago_cons_110,
+                                                'Seoul': seoul_cons_110,
+                                                'Shanghai': shanghai_cons_110,
+                                                'Tokyo': tokyo_cons_110,
+                                                'Lahore': lahore_cons_110 
                                            },
                                            120: {
-                                                'Berlin': 8.7,
-                                                'London': 8.7,
-                                                'Munich': 8.7,
-                                                'New York': 8.7,
-                                                'San Francisco': 8.7,
-                                                'Santiago': 8.7,
-                                                'Seoul': 8.7,
-                                                'Shanghai': 8.7,
-                                                'Tokyo': 8.7,
-                                                'Lahore': 2.7 
+                                                'Berlin': berlin_cons_120,
+                                                'London': london_cons_120,
+                                                'Munich': munich_cons_120,
+                                                'New York': newyork_cons_120,
+                                                'San Francisco': sf_cons_120,
+                                                'Santiago': santiago_cons_120,
+                                                'Seoul': seoul_cons_120,
+                                                'Shanghai': shanghai_cons_120,
+                                                'Tokyo': tokyo_cons_120,
+                                                'Lahore': lahore_cons_120 
                                            },
                                            140: {
-                                                'Berlin': 9.0,
-                                                'London': 9.0,
-                                                'Munich': 9.0,
-                                                'New York': 9.0,
-                                                'San Francisco': 9.0,
-                                                'Santiago': 9.0,
-                                                'Seoul': 9.0,
-                                                'Shanghai': 9.0,
-                                                'Tokyo': 9.0,
-                                                'Lahore': 3.0
+                                                'Berlin': berlin_cons_140,
+                                                'London': london_cons_140,
+                                                'Munich': munich_cons_140,
+                                                'New York': newyork_cons_140,
+                                                'San Francisco': sf_cons_140,
+                                                'Santiago': santiago_cons_140,
+                                                'Seoul': seoul_cons_140,
+                                                'Shanghai': shanghai_cons_140,
+                                                'Tokyo': tokyo_cons_140,
+                                                'Lahore': lahore_cons_140
                                            }
                             },
                                          'targets' : {
@@ -125,75 +291,75 @@ bonus_rates_2023 = {'verticals': {
                                          }
                                           },
                             'Life Sciences': {'costs': {
-                                           70: {'Berlin' : 1.5,
-                                                'London': 1.5,
-                                                'Munich': 1.5,
-                                                'New York': 1.5,
-                                                'San Francisco': 1.5,
-                                                'Santiago': 1.5,
-                                                'Seoul': 1.5,
-                                                'Shanghai': 1.5,
-                                                'Tokyo': 1.5,
-                                                'Lahore': 1.5},
+                                           70: {'Berlin' : berlin_ls_70,
+                                                'London': london_ls_70,
+                                                'Munich': munich_ls_70,
+                                                'New York': newyork_ls_70,
+                                                'San Francisco': sf_ls_70,
+                                                'Santiago': santiago_ls_70,
+                                                'Seoul': seoul_ls_70,
+                                                'Shanghai': shanghai_ls_70,
+                                                'Tokyo': tokyo_ls_70,
+                                                'Lahore': lahore_ls_70},
                                            80: {
-                                                'Berlin' : 3.0,
-                                                'London': 3.0,
-                                                'Munich': 3.0,
-                                                'New York': 3.0,
-                                                'San Francisco': 3.0,
-                                                'Santiago': 3.0,
-                                                'Seoul': 3.0,
-                                                'Shanghai': 3.0,
-                                                'Tokyo': 3.0,
-                                                'Lahore': 3.0
+                                                'Berlin' : berlin_ls_80,
+                                                'London': london_ls_80,
+                                                'Munich': munich_ls_80,
+                                                'New York': newyork_ls_80,
+                                                'San Francisco': sf_ls_80,
+                                                'Santiago': santiago_ls_80,
+                                                'Seoul': seoul_ls_80,
+                                                'Shanghai': shanghai_ls_80,
+                                                'Tokyo': tokyo_ls_80,
+                                                'Lahore': lahore_ls_80
                                                },
                                            90: {
-                                                'Berlin': 5.0,
-                                                'London': 5.0,
-                                                'Munich': 5.0,
-                                                'New York': 5.0,
-                                                'San Francisco': 5.0,
-                                                'Santiago': 5.0,
-                                                'Seoul': 5.0,
-                                                'Shanghai': 5.0,
-                                                'Tokyo': 5.0,
-                                                'Lahore': 5.0
+                                                'Berlin': berlin_ls_90,
+                                                'London': london_ls_90,
+                                                'Munich': munich_ls_90,
+                                                'New York': newyork_ls_90,
+                                                'San Francisco': sf_ls_90,
+                                                'Santiago': santiago_ls_90,
+                                                'Seoul': seoul_ls_90,
+                                                'Shanghai': shanghai_ls_90,
+                                                'Tokyo': tokyo_ls_90,
+                                                'Lahore': lahore_ls_90
                                                 },
                                            100: {
-                                                'Berlin': 7.0,
-                                                'London': 7.0,
-                                                'Munich': 7.0,
-                                                'New York': 7.0,
-                                                'San Francisco': 7.0,
-                                                'Santiago': 7.0,
-                                                'Seoul': 7.0,
-                                                'Shanghai': 7.0,
-                                                'Tokyo': 7.0,
-                                                'Lahore': 2.3 
+                                                'Berlin': berlin_ls_100,
+                                                'London': london_ls_100,
+                                                'Munich': munich_ls_100,
+                                                'New York': newyork_ls_100,
+                                                'San Francisco': sf_ls_100,
+                                                'Santiago': santiago_ls_100,
+                                                'Seoul': seoul_ls_100,
+                                                'Shanghai': shanghai_ls_100,
+                                                'Tokyo': tokyo_ls_100,
+                                                'Lahore': lahore_ls_100 
                                            },
                                            110: {
-                                                'Berlin': 7.3,
-                                                'London': 7.3,
-                                                'Munich': 7.3,
-                                                'New York': 7.3,
-                                                'San Francisco': 7.3,
-                                                'Santiago': 7.3,
-                                                'Seoul': 7.3,
-                                                'Shanghai': 7.3,
-                                                'Tokyo': 7.3,
-                                                'Lahore': 2.5 
+                                                'Berlin': berlin_ls_110,
+                                                'London': london_ls_110,                                                
+                                                'Munich': munich_ls_110,
+                                                'New York': newyork_ls_110,
+                                                'San Francisco': sf_ls_110,
+                                                'Santiago': santiago_ls_110,
+                                                'Seoul': seoul_ls_110,
+                                                'Shanghai': shanghai_ls_110,
+                                                'Tokyo': tokyo_ls_110,
+                                                'Lahore': lahore_ls_110 
                                            },
                                            120: {
-                                                'Berlin': 7.7,
-                                                'London': 7.7,
-                                                'Munich': 7.7,
-                                                'New York': 7.7,
-                                                'San Francisco': 7.7,
-                                                'Santiago': 7.7,
-                                                'Seoul': 7.7,
-                                                'Shanghai': 7.7,
-                                                'Tokyo': 7.7,
-                                                'Lahore': 2.7 
+                                                'Berlin': berlin_ls_120,
+                                                'London': london_ls_120,
+                                                'Munich': munich_ls_120,
+                                                'New York': newyork_ls_120,
+                                                'San Francisco': sf_ls_120,
+                                                'Santiago': santiago_ls_120,
+                                                'Seoul': seoul_ls_120,
+                                                'Shanghai': shanghai_ls_120,
+                                                'Tokyo': tokyo_ls_120,
+                                                'Lahore': lahore_ls_120 
                                            },
                                            140: {
                                                 'Berlin': 8.0,
@@ -266,14 +432,6 @@ def bonus_calculator(df, bonus_rates, target_margin, bonus):
  return df
 
 
-#### Main Program Start #####################
-
-
-#engine = create_engine('postgresql://promitray:s2ChPGiqedLRXAxjc9MAGkUODfMKfDHS09NhE1YX@dwh.czxnn9fmc6d9.eu-central-1.redshift.amazonaws.com:5439/ard')
-#query = return_query()
-#engine.execute(query)
-
-#dates = ['2022-01-01', '2022-02-01', '2022-03-01', '2022-04-01', '2022-05-01', '2022-06-01', '2022-07-01', '2022-08-01', '2022-09-01', '2022-10-01', '2022-11-01']
 dates = ['2022-01-01', '2022-02-01', '2022-03-01', '2022-04-01', '2022-05-01', '2022-06-01', '2022-07-01', '2022-08-01', '2022-09-01', '2022-10-01', '2022-11-01']
 
 overview_list = []
