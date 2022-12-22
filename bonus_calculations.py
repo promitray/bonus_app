@@ -269,9 +269,9 @@ def bonus_calculator(df, bonus_rates, target_margin, bonus):
 #### Main Program Start #####################
 
 
-engine = create_engine('postgresql://promitray:s2ChPGiqedLRXAxjc9MAGkUODfMKfDHS09NhE1YX@dwh.czxnn9fmc6d9.eu-central-1.redshift.amazonaws.com:5439/ard')
-query = return_query()
-engine.execute(query)
+#engine = create_engine('postgresql://promitray:s2ChPGiqedLRXAxjc9MAGkUODfMKfDHS09NhE1YX@dwh.czxnn9fmc6d9.eu-central-1.redshift.amazonaws.com:5439/ard')
+#query = return_query()
+#engine.execute(query)
 
 #dates = ['2022-01-01', '2022-02-01', '2022-03-01', '2022-04-01', '2022-05-01', '2022-06-01', '2022-07-01', '2022-08-01', '2022-09-01', '2022-10-01', '2022-11-01']
 dates = ['2022-01-01', '2022-02-01', '2022-03-01', '2022-04-01', '2022-05-01', '2022-06-01', '2022-07-01', '2022-08-01', '2022-09-01', '2022-10-01', '2022-11-01']
@@ -281,7 +281,7 @@ margins_overview_list = []
 
 for ref_date in dates:
   
-  df = pd.read_sql("""select * from public.bonus_tracker where ref_date = '%s' and cost_center = '3010'"""%ref_date, engine)
+  df = pd.read_csv('%s.csv'%ref_date)
 
   df['target_margin_2023'] = 0
   df.loc[(df['team_vertical'] == 'Consulting') & (df['employee_atheneum_office'] == 'Berlin'), 'target_margin_2023'] = bonus_rates_2023['verticals']['Consulting']['targets']['Berlin']
