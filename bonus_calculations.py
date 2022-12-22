@@ -594,7 +594,7 @@ average_costs = {
      'As_LS_2022': as_ls_2022_avg,
      'As_LS_2023': as_ls_2023_avg,
      'As_total_2022': as_total_2022_avg,
-     'As_LS_2023': as_total_2023_avg
+     'As_total_2023': as_total_2023_avg
      }
 
 print (average_costs)
