@@ -554,17 +554,17 @@ for ref_date in dates:
 
 
   overview = { 'reference_date': ref_date,
-               'Ass_consulting_2022' : consulting_ass_2022,
+               'As_consulting_2022' : consulting_ass_2022,
                'n_consulting_2022': n_consulting_2022,
-               'Ass_consulting_2023' : consulting_ass_2023,
+               'As_consulting_2023' : consulting_ass_2023,
                'n_consulting_2023': n_consulting_2023,
-               'Ass_LS_2022' : ls_ass_2022,
+               'As_LS_2022' : ls_ass_2022,
                'n_LS_2022': n_ls_2022,
-               'Ass_LS_2023' : ls_ass_2023,
+               'As_LS_2023' : ls_ass_2023,
                'n_LS_2023': n_ls_2023,
-               'Ass_total_2022': total_ass_2022,
+               'As_total_2022': total_ass_2022,
                'n_total_2022': n_total_2022,
-               'Ass_total_2023': total_ass_2023,
+               'As_total_2023': total_ass_2023,
                'n_total_2023': n_total_2023
   }
   overview_list.append(overview)
@@ -581,12 +581,37 @@ st.dataframe(df_margin)
 st.title('Bonus Statistics Analysis', anchor=None)
 st.dataframe (df)
 
-df['Ass_consulting_diff'] = df['Ass_consulting_2023'] - df['Ass_consulting_2022']
-df['Ass_LS_diff'] = df['Ass_LS_2023'] - df['Ass_LS_2022']
-df['Ass_total_diff'] = df['Ass_total_2023'] - df['Ass_total_2022']
+as_consulting_2022_avg = df['As_consulting_2022'].mean()
+as_consulting_2023_avg = df['As_consulting_2023'].mean()
+as_ls_2022_avg = df['As_LS_2022'].mean()
+as_ls_2023_avg = df['As_LS_2023'].mean()
+as_total_2022_avg = df['As_total_2022'].mean()
+as_total_2023_avg = df['As_total_2023'].mean()
+
+average_costs = {
+     'As_consulting_2022': as_consulting_2022_avg,
+     'As_consulting_2023': as_consulting_2023_avg,
+     'As_LS_2022': as_ls_2022_avg,
+     'As_LS_2023': as_ls_2023_avg,
+     'As_total_2022': as_total_2022_avg,
+     'As_LS_2023': as_total_2023_avg
+     }
+
+print (average_costs)
+
+df_average_costs = pd.DataFrame([average_costs])
+
+st.title('Bonus Average Costs Analysis', anchor=None)
+st.dataframe(df_average_costs)
+
+
+
+df['As_consulting_diff'] = df['As_consulting_2023'] - df['As_consulting_2022']
+df['As_LS_diff'] = df['As_LS_2023'] - df['As_LS_2022']
+df['As_total_diff'] = df['As_total_2023'] - df['As_total_2022']
 
 st.title('Cost Difference Analysis', anchor=None)
-st.dataframe (df[['reference_date', 'Ass_consulting_diff', 'Ass_LS_diff', 'Ass_total_diff']])
+st.dataframe (df[['reference_date', 'As_consulting_diff', 'As_LS_diff', 'As_total_diff']])
 
 
 
